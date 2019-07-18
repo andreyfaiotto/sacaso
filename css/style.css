@@ -328,10 +328,10 @@ section#bncc-section {
 }
 .green-wave {
     background: url(../img/wave-green.png);
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     background-position: 100% 100%;
     padding-bottom: 30px;
-    background-size: contain;
+    background-size: inherit;
 }
 
 section#plans-section {
@@ -855,7 +855,7 @@ section p {
     }
 
     p.text-count {
-        font-size: 40px;
+        font-size: 37px;
     }
 
     .box-count img {
