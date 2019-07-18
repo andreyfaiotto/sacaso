@@ -128,5 +128,10 @@ $(document).ready(function(){
         });
     });  
     
-    
  });
+
+ $(window).resize(function(){
+	if($(window).width() > 900){
+        $('#navmenu-mobile').hide()
+    }
+})
