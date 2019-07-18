@@ -90,7 +90,7 @@ $(document).ready(function(){
     $('.box-plans-mobile').html($('.box-plans').html())
     
 
-    if($(window).width() < 850){
+    if($(window).width() < 900){
         $('.box-plans-mobile .box-list').slick({
             dots:true,
             centerPadding: '40px',
