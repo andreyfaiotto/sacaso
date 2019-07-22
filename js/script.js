@@ -92,12 +92,30 @@ $(document).ready(function(){
 
     if($(window).width() < 900){
         $('.box-plans-mobile .box-list').slick({
-            dots:true,
-            centerPadding: '40px',
-            mobileFirst:true,
-            initialSlide:1,
-            infinite:false,
-            centerMode: true
+            responsive: [
+                {
+                  breakpoint: 900,
+                  settings: {
+                    dots:true,
+                    centerPadding: '200px',
+                    mobileFirst:true,
+                    initialSlide:1,
+                    infinite:false,
+                    centerMode: true
+                  }
+                },
+                {
+                  breakpoint: 600,
+                  settings: {
+                    dots:true,
+                    centerPadding: '40px',
+                    mobileFirst:true,
+                    initialSlide:1,
+                    infinite:false,
+                    centerMode: true,
+                  }
+                }
+              ]
         })
     }
 

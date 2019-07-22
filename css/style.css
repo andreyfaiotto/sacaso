@@ -386,10 +386,6 @@ section#social-section .container a {
     text-align: center;
 }
 
-section#social-section .container a img {
-    filter: contrast(0.5);
-}
-
 footer#footer {
     background: #ea4365;
 }
@@ -871,7 +867,7 @@ section p {
     }
 
     .plan-item {
-        /* min-width: 200px; */
+        min-width: 250px;
         margin-bottom: 20px;
     }
 
@@ -926,16 +922,11 @@ section p {
     }
 }
 @media(max-width:850px){
-    /* .slick-list{
-        padding: 0px !important;
-    } */
+    
     .box-list {
         padding: 0px;
     }
 
-    .plan-item.plan-red {
-        left: 0px;
-    }
 
     .plan-item.plan-mostard {
         left: 0px;
@@ -967,11 +958,11 @@ section p {
         align-items: center;
     }
     .plan-item.plan-mostard {
-        left: -20px;
+        left: -40px;
     }
 
     .plan-item.plan-green {
-        left: 20px;
+        left: 0;
     }
 
     ul.benefits-list li {
@@ -1086,10 +1077,6 @@ section p {
         align-items: center;
         width: 100%;
     }
-    .plan-item.plan-red {
-            min-width: auto;
-        }
-
 }
 @media(max-width:500px){
         .header-container {
@@ -1146,5 +1133,15 @@ nav#navmenu a, nav#navmenu-mobile a {right: 15px;top: 90px;width: calc(100% - 60
 
     .pink-wave .right-text {
         margin-top: 30px;
+    }
+    .plan-item.plan-red {
+        left: 0;
+    }
+    
+    .plan-item.plan-green {
+        left: 20px;
+    }
+    .plan-item.plan-mostard {
+        left: -20px;
     }
 }
