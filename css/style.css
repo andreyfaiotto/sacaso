@@ -39,6 +39,11 @@ iframe.iframe-video {
     display: block;
 }
 
+video.iframe-video {
+    margin: 0 auto;
+    display: block;
+}
+
 .main-bg{
     background: url(../img/bg-main.jpg);
     position: relative;
