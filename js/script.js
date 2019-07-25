@@ -152,9 +152,15 @@ $(document).ready(function(){
 
     $('#header .hambunger-menu').click(function(){
         $('#header #navmenu-mobile').slideToggle();
+        if($('#header-fixed #navmenu-mobile').is(':visible')){
+            $('#header-fixed #navmenu-mobile').slideToggle();
+        }
     })
     $('#header-fixed .hambunger-menu').click(function(){
         $('#header-fixed #navmenu-mobile').slideToggle();
+        if($('#header #navmenu-mobile').is(':visible')){
+            $('#header #navmenu-mobile').slideToggle();
+        }
     })
         
     
