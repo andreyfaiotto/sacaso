@@ -184,7 +184,8 @@ $(document).ready(function(){
 
  $(window).resize(function(){
 	if($(window).width() > 900){
-        $('#navmenu-mobile').hide()
+        $('#header-fixed #navmenu-mobile').hide()
+        $('#header #navmenu-mobile').hide()
     }
 })
 
