@@ -86,9 +86,40 @@ $(window).scroll(function() {
 
 $(document).ready(function(){
     //clone components
-    $('#navmenu-mobile').html($('#navmenu').html())
+    $('#header-fixed').html($('#header').html())
+    $('#header-fixed #navmenu-mobile').html($('#navmenu').html())
+    $('#header #navmenu-mobile').html($('#navmenu').html())
     $('.box-plans-mobile').html($('.box-plans').html())
+
+    $('.show-lb').click(function(){
+        var htmlLogin = '<div class="lb-top"><h3>Login</h3></div><form action="" id="formLogin"><input placeholder="E-mail" type="email" id="emailLogin"/>	<input type="password" placeholder="Senha" id="passwordLogin"/>	<input type="submit" value="ENTRAR"/></form><a href="#" class="forgot-pass">Esqueceu a senha?</a><hr><a href="#" class="facebook-access">ENTRAR COM FACEBOOK</a><hr><div class="footer-lb">	<a href="#" class="need-help">Precisa de ajuda?</a>	<a href="#" class="singin">Inscreva-se!</a></div>'
+        Swal.fire({
+            html: htmlLogin,
+            showCloseButton: true,
+            showCancelButton: false,
+            showConfirmButton: false,
+        })
+    })
+    $('body').on('click touchstart','.singin', function(){
+        var htmlLogin = '<div class="lb-top"> <h3>Cadastro Rápido</h3></div><form action="" id="formSing"><input type="text" placeholder="Nome completo" id="nameSing" /> <input type="email" placeholder="E-mail" id="emailSing" /> <input type="password" placeholder="Senha" id="passwordSing" /> <input type="password" placeholder="Repetir Senha" id="repasswordSing" /> <input type="submit" value="Confirmar" /></form>'
+        Swal.fire({
+            html: htmlLogin,
+            showCloseButton: true,
+            showCancelButton: false,
+            showConfirmButton: false,
+        })
+    })
     
+    var headerHeight = $('#header').innerHeight();
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > headerHeight + 5){
+            $('#header-fixed').addClass('fixed-active')
+
+        }else{
+            $('#header-fixed').removeClass('fixed-active')
+            $('#header-fixed #navmenu-mobile').hide()            
+        }
+    });
 
     if($(window).width() < 900){
         $('.box-plans-mobile .box-list').slick({
@@ -119,8 +150,11 @@ $(document).ready(function(){
         })
     }
 
-    $('.hambunger-menu').click(function(){
-        $('#navmenu-mobile').slideToggle();
+    $('#header .hambunger-menu').click(function(){
+        $('#header #navmenu-mobile').slideToggle();
+    })
+    $('body').on('click touchstart', 'nav#header-fixed .hambunger-menu',function(){
+        $('#header-fixed #navmenu-mobile').slideToggle();
     })
     
     $('#navmenu a[href^="#"]').on('click', function(e) {
@@ -153,3 +187,4 @@ $(document).ready(function(){
         $('#navmenu-mobile').hide()
     }
 })
+
