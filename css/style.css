@@ -62,7 +62,7 @@ header#header {
     max-width: 1920px;
     margin: 0 auto;
 }
-nav#header-fixed {
+#header-fixed {
     background: #0000003d;
     position: fixed;
     width: 100%;
@@ -77,11 +77,11 @@ nav#header-fixed {
     width: auto;
 }
 
-nav#header-fixed .header-container {
+#header-fixed .header-container {
     padding: 15px;
 }
 
-nav#header-fixed.fixed-active {
+#header-fixed.fixed-active {
     top: 0;
 }
 .float-phone{

@@ -153,9 +153,10 @@ $(document).ready(function(){
     $('#header .hambunger-menu').click(function(){
         $('#header #navmenu-mobile').slideToggle();
     })
-    $('body').on('click touchstart', 'nav#header-fixed .hambunger-menu',function(){
+    $('#header-fixed .hambunger-menu').click(function(){
         $('#header-fixed #navmenu-mobile').slideToggle();
     })
+        
     
     $('#navmenu a[href^="#"]').on('click', function(e) {
         e.preventDefault();
